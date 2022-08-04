@@ -1,0 +1,21 @@
+{
+	"name": "newdts",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PracticeAzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Date Dimension",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "uploadedfiles",
+				"container": "practice"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

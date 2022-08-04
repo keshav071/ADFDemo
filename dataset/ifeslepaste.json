@@ -1,0 +1,27 @@
+{
+	"name": "ifeslepaste",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PracticeAzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"opfolder": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@dataset().opfolder",
+					"type": "Expression"
+				},
+				"container": "faltu"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

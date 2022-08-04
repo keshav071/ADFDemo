@@ -1,0 +1,22 @@
+{
+	"name": "SqlServer_dynmic",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"dbname": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=MSI\\SQLEXPRESS;initial catalog=@{linkedService().dbname}",
+			"userName": "MSI\\kesha",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxZjgyMGE1MS00ZDViLTRjODAtYWU2Mi1jZDU0MzU2YzNjOTAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

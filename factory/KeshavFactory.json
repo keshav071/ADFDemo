@@ -1,0 +1,9 @@
+{
+	"name": "KeshavFactory",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "57f714b5-6702-4d74-992e-b8cca6fe1430",
+		"tenantId": "0e497918-3755-481b-9466-08118d0d2c9d"
+	}
+}
