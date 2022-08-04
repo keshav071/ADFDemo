@@ -1,0 +1,23 @@
+{
+    "name": "pastunalloted",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "PracticeAzureBlobStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobStorageLocation",
+                "fileName": "ualloted.csv",
+                "folderPath": "output",
+                "container": "faltu"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "quoteChar": "\""
+        },
+        "schema": []
+    }
+}

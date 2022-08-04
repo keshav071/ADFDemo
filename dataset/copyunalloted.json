@@ -1,0 +1,21 @@
+{
+    "name": "copyunalloted",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "SqlServer1",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "SqlServerTable",
+        "schema": [
+            {
+                "name": "studentid",
+                "type": "nvarchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "unalloted"
+        }
+    }
+}
