@@ -83,17 +83,8 @@
 					"SqlServer1_password": {
 						"value": "[parameters('SqlServer1_password')]"
 					},
-					"SqlServer_dynmic_connectionString": {
-						"value": "[parameters('SqlServer_dynmic_connectionString')]"
-					},
-					"SqlServer_dynmic_password": {
-						"value": "[parameters('SqlServer_dynmic_password')]"
-					},
 					"SqlServer1_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
-					},
-					"SqlServer_dynmic_properties_typeProperties_userName": {
-						"value": "[parameters('SqlServer_dynmic_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -113,6 +104,35 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"SqlServer_dynmic_connectionString": {
+						"value": "[parameters('SqlServer_dynmic_connectionString')]"
+					},
+					"SqlServer_dynmic_password": {
+						"value": "[parameters('SqlServer_dynmic_password')]"
+					},
+					"SqlServer_dynmic_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer_dynmic_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'KeshavFactory_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "KeshavFactory_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
 					"fordynmic_properties_pipeline_parameters_dbname": {
 						"value": "[parameters('fordynmic_properties_pipeline_parameters_dbname')]"
 					},
@@ -125,7 +145,7 @@
 				}
 			},
 			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'KeshavFactory_ArmTemplate_0')]"
+				"[resourceId('Microsoft.Resources/deployments', 'KeshavFactory_ArmTemplate_1')]"
 			]
 		}
 	]
