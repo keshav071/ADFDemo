@@ -1,0 +1,45 @@
+{
+	"name": "SourceSTG",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PracticeAzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"folderPath": "Stg",
+				"container": "staging"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Account_id",
+				"type": "String"
+			},
+			{
+				"name": "Account_type",
+				"type": "String"
+			},
+			{
+				"name": "Balance",
+				"type": "String"
+			}
+		]
+	}
+}

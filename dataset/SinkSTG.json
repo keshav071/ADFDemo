@@ -1,0 +1,27 @@
+{
+	"name": "SinkSTG",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer_dynmic",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"dbname": "stg"
+			}
+		},
+		"parameters": {
+			"savename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "stg",
+			"table": {
+				"value": "@dataset().savename",
+				"type": "Expression"
+			}
+		}
+	}
+}
