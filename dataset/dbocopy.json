@@ -1,0 +1,15 @@
+{
+	"name": "dbocopy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer_dynmic",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"dbname": "stg"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}

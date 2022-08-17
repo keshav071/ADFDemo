@@ -1,5 +1,5 @@
 {
-	"name": "dbo_copy",
+	"name": "dbosink",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer_dynmic",
@@ -9,7 +9,7 @@
 			}
 		},
 		"parameters": {
-			"filename": {
+			"savename": {
 				"type": "string"
 			}
 		},
@@ -17,9 +17,9 @@
 		"type": "SqlServerTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "stg",
+			"schema": "dbo",
 			"table": {
-				"value": "@dataset().filename",
+				"value": "@dataset().savename",
 				"type": "Expression"
 			}
 		}
