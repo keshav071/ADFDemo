@@ -76,15 +76,6 @@
 					},
 					"PracticeAzureBlobStorage1_connectionString": {
 						"value": "[parameters('PracticeAzureBlobStorage1_connectionString')]"
-					},
-					"SqlServer1_connectionString": {
-						"value": "[parameters('SqlServer1_connectionString')]"
-					},
-					"SqlServer1_password": {
-						"value": "[parameters('SqlServer1_password')]"
-					},
-					"SqlServer1_properties_typeProperties_userName": {
-						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -104,11 +95,20 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
 					"SqlServer_dynmic_connectionString": {
 						"value": "[parameters('SqlServer_dynmic_connectionString')]"
 					},
 					"SqlServer_dynmic_password": {
 						"value": "[parameters('SqlServer_dynmic_password')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
 					},
 					"SqlServer_dynmic_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer_dynmic_properties_typeProperties_userName')]"
