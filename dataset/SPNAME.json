@@ -1,0 +1,29 @@
+{
+	"name": "SPNAME",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PracticeAzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "SPNAME.csv",
+				"folderPath": "Stg",
+				"container": "staging"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SP_NAME",
+				"type": "String"
+			}
+		]
+	}
+}

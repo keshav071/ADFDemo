@@ -1,5 +1,5 @@
 {
-	"name": "STG_Copying",
+	"name": "OLAP_MOVING",
 	"properties": {
 		"activities": [
 			{
@@ -119,6 +119,26 @@
 							]
 						}
 					]
+				}
+			},
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "CHILD_PIPELINE",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
 				}
 			}
 		],
